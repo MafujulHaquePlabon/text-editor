@@ -11,36 +11,37 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-purple-500">
+  <body class="">
     <main>
-        <h1 class="text-center text-white font-semibold text-3xl mt-20 ">
-            Welcome to my <span class="text-yellow-400">text editor</span>
+        <h1 class="text-center  font-bold text-3xl lg:mt-20 mt-10">
+            Make your <span class="text-orange-600">text</span> awesome 
           </h1>
-      <section class="lg:w-2/4 w-3/4 mx-auto bg-white rounded mt-28">
+      <section class="lg:w-2/4  mx-auto bg-gray-200 lg:p-16 py-16 rounded mt-28">
        
-          <div class="grid grid-cols-2  lg:grid-cols-3 bg-gray-100 p-2">
+          <div class="grid grid-cols-2  lg:grid-cols-3 bg-gray-100 p-2 rounded ">
             <div class="flex align-center gap-5">
-              <button class="bg-white px-2" type="submit"><i class="fa-solid fa-rotate-right"></i></button>
-              <button class="bg-white px-2" type="submit"><i class="fa-solid fa-bold"></i></button>
-              <button class="bg-white px-2"  type="submit"><i class="fa-sharp fa-solid fa-italic"></i></button>
-              <button class="bg-white px-2"  type="submit"><i class="fa-solid fa-underline"></i></button>
+              <button id="reload" class="bg-white px-2" type="submit"><i class="fa-solid fa-rotate-right"></i></button>
+              <button id="bold" class="bg-white px-2" type="submit"><i class="fa-solid fa-bold"></i></button>
+              <button id="italic" class="bg-white px-2"  type="submit"><i class="fa-sharp fa-solid fa-italic"></i></button>
+              <button id="underline" class="bg-white px-2"  type="submit"><i class="fa-solid fa-underline"></i></button>
             </div>
             <div class="flex justify-end lg:justify-center align-center gap-5 ">
-                <button  type="submit"><img class="w-[16px] bg-white" src="images/left.png" alt=""></button>
-                <button type="submit"><img class="w-[25px] bg-white" src="images/center.svg" alt=""></button>
-                <button type="submit"><img class="w-[25px] bg-white" src="images/right.png" alt=""></button>
+                <button id="left-align" type="submit"><img class="w-[16px] bg-white" src="images/left.png" alt=""></button>
+                <button id="center-align" type="submit"><img class="w-[25px] bg-white" src="images/center.svg" alt=""></button>
+                <button id="right-align" type="submit"><img class="w-[25px] bg-white" src="images/right.png" alt=""></button>
+                <button id="justify-align" type="submit"><img class="w-[25px] bg-white" src="images/justify.png" alt=""></button>
             </div>
             <div class="flex justify-end  align-center gap-5 mt-2 lg:mt-0">
-               <input class="lg:w-1/6 w-1/2 border-solid border border-gray-300 bg-white px-2" type="number" value="10" name="" id="">
-                <button class="font-bold text-xl bg-white px-2" type="submit">aA</button>
-               <input class="bg-whitepx-2 " type="color" name="" id="">
+               <input class="lg:w-1/3 w-1/2 border-solid border border-gray-300 bg-white px-2" type="number" value="" min="16" placeholder="16px" name="" id="number">
+                <button title="Make your text upppercase or lowercase!😎" id="upperLower" class="font-bold text-xl bg-white px-2" type="submit">aA</button>
+               <input title="Text color " class="bg-whitepx-2 " type="color" name="" id="color">
           </div>
         </div>
         <div class="mt-8 p-2">
-            <textarea class="w-full border-solid border border-gray-500" name="" id="" cols="30" rows="10"></textarea>
+            <textarea id="message" class="w-full h-[250px] border-solid outline-none px-2 pt-1 rounded " name="" id="" cols="30" placeholder="Write something here..."  rows="10"></textarea>
         </div>
       </section>
     </main>
-    <script src="js/index.js" ></script>
+    <script src="js/text-editor.js" ></script>
   </body>
 </html>
