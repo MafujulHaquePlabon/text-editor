@@ -1,0 +1,7 @@
+.textOrange {
+  color: rgb(232, 152, 3);
+}
+#reload:hover {
+  background-color: orange;
+  border-radius: 5px;
+}
