@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text_editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/384082714d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-purple-500">
+    <main>
+        <h1 class="text-center text-white font-semibold text-3xl mt-20 ">
+            Welcome to my <span class="text-yellow-400">text editor</span>
+          </h1>
+      <section class="lg:w-2/4 w-3/4 mx-auto bg-white rounded mt-28">
+       
+          <div class="grid grid-cols-2  lg:grid-cols-3 bg-gray-100 p-2">
+            <div class="flex align-center gap-5">
+              <button class="bg-white px-2" type="submit"><i class="fa-solid fa-rotate-right"></i></button>
+              <button class="bg-white px-2" type="submit"><i class="fa-solid fa-bold"></i></button>
+              <button class="bg-white px-2"  type="submit"><i class="fa-sharp fa-solid fa-italic"></i></button>
+              <button class="bg-white px-2"  type="submit"><i class="fa-solid fa-underline"></i></button>
+            </div>
+            <div class="flex justify-end lg:justify-center align-center gap-5 ">
+                <button  type="submit"><img class="w-[16px] bg-white" src="images/left.png" alt=""></button>
+                <button type="submit"><img class="w-[25px] bg-white" src="images/center.svg" alt=""></button>
+                <button type="submit"><img class="w-[25px] bg-white" src="images/right.png" alt=""></button>
+            </div>
+            <div class="flex justify-end  align-center gap-5 mt-2 lg:mt-0">
+               <input class="lg:w-1/6 w-1/2 border-solid border border-gray-300 bg-white px-2" type="number" value="10" name="" id="">
+                <button class="font-bold text-xl bg-white px-2" type="submit">aA</button>
+               <input class="bg-whitepx-2 " type="color" name="" id="">
+          </div>
+        </div>
+        <div class="mt-8 p-2">
+            <textarea class="w-full border-solid border border-gray-500" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </section>
+    </main>
+    <script src="js/index.js" ></script>
+  </body>
+</html>
