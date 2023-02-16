@@ -122,14 +122,18 @@ document.getElementById("color").addEventListener("change", function () {
   message.style.color = colorValue;
 });
 const parentDiv = document.getElementById("parent");
+const newElement = document.createElement("div");
 document.getElementById("comment").addEventListener("click", function () {
-  const newElement = document.createElement("div");
+ 
 const mg =message.value;
-  newElement.innerHTML=`<h6>${mg}</h6><button id="deletebtn" class="bgOrangeDelete">delete</button>`
+  newElement.innerHTML=`<h6>${mg}</h6>`
   newElement.setAttribute("class", "text-center dp flex justify-center align-center mb-2");
   parentDiv.appendChild(newElement);
   console.log(newElement);
   message.value = "";
+});
+document.getElementById("delete-comment").addEventListener("click", function () {
+ parentDiv.removeChild(newElement) 
 });
 
 
