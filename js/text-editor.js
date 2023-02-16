@@ -1,8 +1,16 @@
+// document.addEventListener("contextmenu", (event) => {
+//   event.preventDefault();
+//   alert('Do you try to copy my code?correct?')
+// });
 let countReload = 0;
 let countBold = 0;
 let countItalic = 0;
 let countUnderline = 0;
 let countUpperLower = 0;
+let countLeftA = 0;
+let countCenterA = 0;
+let countRightA = 0;
+let countJustifyA = 0;
 const message = document.getElementById("message");
 document.getElementById("reload").addEventListener("click", function () {
   message.value = "";
@@ -42,15 +50,59 @@ document.getElementById("underline").addEventListener("click", function () {
 });
 document.getElementById("left-align").addEventListener("click", function () {
   message.style.textAlign = "left";
+  countLeftA +=1;
+  if(countLeftA >= 1){
+    document.getElementById("left-align").style.backgroundColor = "orange";
+    document.getElementById("left-align").style.borderRadius = "5px";
+    document.getElementById("center-align").style.backgroundColor = "white";
+    document.getElementById("right-align").style.backgroundColor = "white";
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  }
+  else{
+    document.getElementById("left-align").style.backgroundColor = "white";
+  }
 });
 document.getElementById("center-align").addEventListener("click", function () {
   message.style.textAlign = "center";
+  countCenterA +=1;
+  if(countCenterA >= 1){
+    document.getElementById("center-align").style.backgroundColor = "orange";
+    document.getElementById("center-align").style.borderRadius = "5px";
+    document.getElementById("left-align").style.backgroundColor = "white";
+    document.getElementById("right-align").style.backgroundColor = "white";
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  }
+  else{
+    document.getElementById("center-align").style.backgroundColor = "white";
+  }
 });
 document.getElementById("right-align").addEventListener("click", function () {
   message.style.textAlign = "right";
+  countRightA +=1;
+  if(countRightA >= 1){
+    document.getElementById("right-align").style.backgroundColor = "orange";
+    document.getElementById("right-align").style.borderRadius = "5px";
+    document.getElementById("left-align").style.backgroundColor = "white";
+    document.getElementById("center-align").style.backgroundColor = "white";
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  }
+  else{
+    document.getElementById("right-align").style.backgroundColor = "white";
+  }
 });
 document.getElementById("justify-align").addEventListener("click", function () {
   message.style.textAlign = "justify";
+  countJustifyA +=1;
+  if(countJustifyA >= 1){
+    document.getElementById("justify-align").style.backgroundColor = "orange";
+    document.getElementById("justify-align").style.borderRadius = "5px";
+    document.getElementById("left-align").style.backgroundColor = "white";
+    document.getElementById("center-align").style.backgroundColor = "white";
+    document.getElementById("right-align").style.backgroundColor = "white";
+  }
+  else{
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  }
 });
 document.getElementById("number").addEventListener("click", function () {
   const numberValue = document.getElementById("number").value;
