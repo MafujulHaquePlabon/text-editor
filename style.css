@@ -5,3 +5,22 @@
   background-color: orange;
   border-radius: 5px;
 }
+.bgOrange{
+  background-color: orange !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.bgOrangeDelete{
+  background-color: orange !important;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-left: 8px;
+}
+.bgOrange:hover,.bgOrangeDelete:hover{
+  background-color: rgb(241, 158, 4) !important;
+  
+}
+#parent>h6{
+  font-size: 12px;
+}

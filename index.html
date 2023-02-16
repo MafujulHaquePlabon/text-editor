@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text_editor</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/384082714d.js"
       crossorigin="anonymous"
@@ -14,36 +14,111 @@
   </head>
   <body class="">
     <main>
-        <h1 class="text-center  font-bold text-3xl lg:mt-20 mt-10">
-            Make your <span class="textOrange">text</span> awesome 
-          </h1>
-      <section class="lg:w-2/4  mx-auto bg-gray-200 lg:p-16 py-16 rounded mt-28">
-       
-          <div class="grid grid-cols-2 mx-2 lg:grid-cols-3 bg-gray-100 p-2 rounded ">
-            <div class="flex align-center gap-5">
-              <button id="reload" title="Reload" class="bg-white px-2" type="submit"><i class="fa-solid fa-rotate-right"></i></button>
-              <button id="bold" title="Font Bold " class="bg-white px-2" type="submit"><i class="fa-solid fa-bold"></i></button>
-              <button id="italic"title="Font Italic" class="bg-white px-2"  type="submit"><i class="fa-sharp fa-solid fa-italic"></i></button>
-              <button id="underline"title="Font Underline " class="bg-white px-2"  type="submit"><i class="fa-solid fa-underline"></i></button>
-            </div>
-            <div class="flex justify-end lg:justify-center align-center gap-5 ">
-                <button id="left-align" type="submit"><img class="w-[25px] px-1  " src="images/leftA.svg.png" alt=""></button>
-                <button id="center-align" type="submit"><img class="w-[30px] px-1" src="images/centerA.png" alt=""></button>
-                <button id="right-align" type="submit"><img class="w-[25px] h-[18px] px-1" src="images/rightA.svg.png" alt=""></button>
-                <button id="justify-align" type="submit"><img class="w-[30px] px-1 " src="images/justifyA.svg" alt=""></button>
-            </div>
-            <div class="flex justify-end  align-center gap-5 mt-2 lg:mt-0">
-               <input class="lg:w-1/3 w-1/2 border-solid border border-gray-300 bg-white px-2" type="number" value="16" min="8" name="" id="number">
-                <button title="Make your text upppercase or lowercase!😎" id="upperLower" class="font-bold text-lg bg-white px-2" type="submit">aA</button>
-               <input title="Text color " class="bg-whitepx-2 " type="color" name="" id="color">
+      <h1 class="text-center font-bold text-3xl lg:mt-20 mt-10">
+        Make your <span class="textOrange">text</span> awesome
+      </h1>
+     <div id="parent" class="mt-5" >
+      <h5 class="text-center">your feedback here:</h5>
+     </div>
+      <section class="lg:w-2/4 mx-auto bg-gray-200 lg:p-16 py-16 rounded mt-28">
+        <div
+          class="grid grid-cols-2 mx-2 lg:grid-cols-3 bg-gray-100 p-2 rounded"
+        >
+          <div class="flex align-center gap-5">
+            <button
+              id="reload"
+              title="Reload"
+              class="bg-white px-2"
+              type="submit"
+            >
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <button
+              id="bold"
+              title="Font Bold "
+              class="bg-white px-2"
+              type="submit"
+            >
+              <i class="fa-solid fa-bold"></i>
+            </button>
+            <button
+              id="italic"
+              title="Font Italic"
+              class="bg-white px-2"
+              type="submit"
+            >
+              <i class="fa-sharp fa-solid fa-italic"></i>
+            </button>
+            <button
+              id="underline"
+              title="Font Underline "
+              class="bg-white px-2"
+              type="submit"
+            >
+              <i class="fa-solid fa-underline"></i>
+            </button>
+          </div>
+          <div class="flex justify-end lg:justify-center align-center gap-5">
+            <button id="left-align" type="submit">
+              <img class="w-[25px] px-1" src="images/leftA.svg.png" alt="" />
+            </button>
+            <button id="center-align" type="submit">
+              <img class="w-[30px] px-1" src="images/centerA.png" alt="" />
+            </button>
+            <button id="right-align" type="submit">
+              <img
+                class="w-[25px] h-[18px] px-1"
+                src="images/rightA.svg.png"
+                alt=""
+              />
+            </button>
+            <button id="justify-align" type="submit">
+              <img class="w-[30px] px-1" src="images/justifyA.svg" alt="" />
+            </button>
+          </div>
+          <div class="flex justify-end align-center gap-5 mt-2 lg:mt-0">
+            <input
+              class="lg:w-1/3 w-1/2 border-solid border border-gray-300 bg-white px-2"
+              type="number"
+              value="16"
+              min="8"
+              name=""
+              id="number"
+            />
+            <button
+              title="Make your text upppercase or lowercase!😎"
+              id="upperLower"
+              class="font-bold text-lg bg-white px-2"
+              type="submit"
+            >
+              aA
+            </button>
+            <input
+              title="Text color "
+              class="bg-whitepx-2"
+              type="color"
+              name=""
+              id="color"
+            />
           </div>
         </div>
         <div class="mt-8 p-2">
-            <textarea id="message" class="w-full h-[250px] border-solid outline-none px-2 pt-1 rounded " name="" id="" cols="30" placeholder="Write something here..."  rows="10"></textarea>
+          <textarea
+            id="message"
+            class="w-full h-[250px] border-solid outline-none px-2 pt-1 rounded"
+            name=""
+            id=""
+            cols="30"
+            placeholder="Write something here..."
+            rows="10"
+          ></textarea>
         </div>
+        <button id="comment" class="bgOrange font-semibold" type="submit">Comment</button>
       </section>
-      <p class="text-center mt-5"><small >&copy; Copyright Mafujul Haque Plabon right reserved ;</small></p>
+      <p class="text-center mt-5">
+        <small>&copy; Copyright Mafujul Haque Plabon right reserved ;</small>
+      </p>
     </main>
-    <script src="js/text-editor.js" ></script>
+    <script src="js/text-editor.js"></script>
   </body>
 </html>

@@ -48,62 +48,60 @@ document.getElementById("underline").addEventListener("click", function () {
     message.style.textDecoration = "none";
   }
 });
-document.getElementById("left-align").addEventListener("click", function () {
-  message.style.textAlign = "left";
-  countLeftA +=1;
-  if(countLeftA >= 1){
-    document.getElementById("left-align").style.backgroundColor = "orange";
-    document.getElementById("left-align").style.borderRadius = "5px";
-    document.getElementById("center-align").style.backgroundColor = "white";
-    document.getElementById("right-align").style.backgroundColor = "white";
-    document.getElementById("justify-align").style.backgroundColor = "white";
-  }
-  else{
-    document.getElementById("left-align").style.backgroundColor = "white";
-  }
-});
-document.getElementById("center-align").addEventListener("click", function () {
-  message.style.textAlign = "center";
-  countCenterA +=1;
-  if(countCenterA >= 1){
-    document.getElementById("center-align").style.backgroundColor = "orange";
-    document.getElementById("center-align").style.borderRadius = "5px";
-    document.getElementById("left-align").style.backgroundColor = "white";
-    document.getElementById("right-align").style.backgroundColor = "white";
-    document.getElementById("justify-align").style.backgroundColor = "white";
-  }
-  else{
-    document.getElementById("center-align").style.backgroundColor = "white";
-  }
-});
-document.getElementById("right-align").addEventListener("click", function () {
-  message.style.textAlign = "right";
-  countRightA +=1;
-  if(countRightA >= 1){
-    document.getElementById("right-align").style.backgroundColor = "orange";
-    document.getElementById("right-align").style.borderRadius = "5px";
-    document.getElementById("left-align").style.backgroundColor = "white";
-    document.getElementById("center-align").style.backgroundColor = "white";
-    document.getElementById("justify-align").style.backgroundColor = "white";
-  }
-  else{
-    document.getElementById("right-align").style.backgroundColor = "white";
-  }
-});
 document.getElementById("justify-align").addEventListener("click", function () {
   message.style.textAlign = "justify";
-  countJustifyA +=1;
-  if(countJustifyA >= 1){
+  document.getElementById("justify-align").style.backgroundColor = "orange";
+  countJustifyA += 1;
+  if (countJustifyA >= 1) {
     document.getElementById("justify-align").style.backgroundColor = "orange";
     document.getElementById("justify-align").style.borderRadius = "5px";
     document.getElementById("left-align").style.backgroundColor = "white";
     document.getElementById("center-align").style.backgroundColor = "white";
     document.getElementById("right-align").style.backgroundColor = "white";
-  }
-  else{
+  } else {
     document.getElementById("justify-align").style.backgroundColor = "white";
   }
 });
+document.getElementById("left-align").addEventListener("click", function () {
+  message.style.textAlign = "left";
+  countLeftA += 1;
+  if (countLeftA >= 1) {
+    document.getElementById("left-align").style.backgroundColor = "orange";
+    document.getElementById("left-align").style.borderRadius = "5px";
+    document.getElementById("center-align").style.backgroundColor = "white";
+    document.getElementById("right-align").style.backgroundColor = "white";
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  } else {
+    document.getElementById("left-align").style.backgroundColor = "white";
+  }
+});
+document.getElementById("center-align").addEventListener("click", function () {
+  message.style.textAlign = "center";
+  countCenterA += 1;
+  if (countCenterA >= 1) {
+    document.getElementById("center-align").style.backgroundColor = "orange";
+    document.getElementById("center-align").style.borderRadius = "5px";
+    document.getElementById("left-align").style.backgroundColor = "white";
+    document.getElementById("right-align").style.backgroundColor = "white";
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  } else {
+    document.getElementById("center-align").style.backgroundColor = "white";
+  }
+});
+document.getElementById("right-align").addEventListener("click", function () {
+  message.style.textAlign = "right";
+  countRightA += 1;
+  if (countRightA >= 1) {
+    document.getElementById("right-align").style.backgroundColor = "orange";
+    document.getElementById("right-align").style.borderRadius = "5px";
+    document.getElementById("left-align").style.backgroundColor = "white";
+    document.getElementById("center-align").style.backgroundColor = "white";
+    document.getElementById("justify-align").style.backgroundColor = "white";
+  } else {
+    document.getElementById("right-align").style.backgroundColor = "white";
+  }
+});
+
 document.getElementById("number").addEventListener("click", function () {
   const numberValue = document.getElementById("number").value;
   message.style.fontSize = `${numberValue}px`;
@@ -123,3 +121,16 @@ document.getElementById("color").addEventListener("change", function () {
   const colorValue = document.getElementById("color").value;
   message.style.color = colorValue;
 });
+const parentDiv = document.getElementById("parent");
+document.getElementById("comment").addEventListener("click", function () {
+  const newElement = document.createElement("div");
+const mg =message.value;
+  newElement.innerHTML=`<h6>${mg}</h6><button id="deletebtn" class="bgOrangeDelete">delete</button>`
+  newElement.setAttribute("class", "text-center dp flex justify-center align-center mb-2");
+  parentDiv.appendChild(newElement);
+  console.log(newElement);
+  message.value = "";
+});
+
+
+
